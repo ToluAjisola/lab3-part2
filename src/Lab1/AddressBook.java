@@ -3,25 +3,34 @@ import java.util.*;
 
 public class AddressBook {
 
-		public ArrayList<BuddyInfo> infos= new ArrayList<BuddyInfo>();
+	private List<BuddyInfo> infos;
+		
+		
+		public AddressBook() {
+			this.infos= new ArrayList<BuddyInfo>();
+		}
 		
 		public void addBuddy(BuddyInfo aBuddyInfo) {
 
 			if(aBuddyInfo != null) {
-				infos.add(aBuddyInfo);
+				this.infos.add(aBuddyInfo);
 			}
 		}
 
-		public void removeBuddy(int index) {
+		public BuddyInfo removeBuddy(int index) {
 
-			if(index >= 0 && index < infos.size()) {
-				infos.remove(index);
+			if(index >= 0 && index < this.infos.size()) {
+				return this.infos.remove(index);
 			}
+			return null;
 		}
 
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
-			System.out.println("Address Book");
+			BuddyInfo buddy = new BuddyInfo("Tom","Carleton","613");
+			AddressBook addressBook = new AddressBook();
+			addressBook.addBuddy(buddy);
+			addressBook.removeBuddy(0);
 		}
 
 	

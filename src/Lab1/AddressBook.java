@@ -2,7 +2,7 @@ package Lab1;
 import java.util.*;
 
 public class AddressBook {
-
+// sup
 	private List<BuddyInfo> infos;
 		
 		

@@ -24,6 +24,12 @@ public class AddressBook {
 			}
 			return null;
 		}
+		
+		public int size() {
+			int x = infos.size();
+			
+			return x;
+		}
 
 		public static void main(String[] args) {
 			// TODO Auto-generated method stub
